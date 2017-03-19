@@ -11,6 +11,9 @@
 
 module.exports.models = {
 
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
+
   /***************************************************************************
   *                                                                          *
   * Your app's default connection. i.e. the name of one of your app's        *
@@ -18,6 +21,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // connection: 'localDiskDb',
+  connection: 'sqlitedb',
 
   /***************************************************************************
   *                                                                          *
@@ -28,5 +32,5 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // migrate: 'alter'
-
+  migrate: 'drop'
 };

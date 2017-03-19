@@ -34,6 +34,31 @@ module.exports.connections = {
 
   /***************************************************************************
   *                                                                          *
+  * SQLite                                                                   *
+  *                                                                          *
+  * Run: npm install waterline-sqlite3                                       *
+  *                                                                          *
+  ***************************************************************************/
+  sqlitedb: {
+    /**
+     * Database instance type. Specify whether to store the database on disk
+     * or in memory.
+     */
+    adapter: 'waterline-sqlite3', // or 'memory' 
+
+    // /**
+    //  * Location of file if type='disk'
+    //  */
+    // filename: './.tmp/db.sqlite',
+ 
+    // /**
+    //  * Set to true to output SQL queries
+    //  */
+    // debug: false
+  }
+
+  /***************************************************************************
+  *                                                                          *
   * MySQL is the world's most popular relational database.                   *
   * http://en.wikipedia.org/wiki/MySQL                                       *
   *                                                                          *

@@ -46,13 +46,23 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   // Share
-  'GET /cars/:vin/lock': {
+  'POST /cars/:vin/drivers': {
     controller: 'ShareController',
-    action: 'getLockStatus'
+    action: 'createDriver'
   },
+  'POST /cars': {
+    controller: 'ShareController',
+    action: 'createCar'
+  },
+
+
   'POST /cars/:vin/lock/action': {
     controller: 'ShareController',
     action: 'postlockCommand'
+  },
+  'GET /cars/:vin/lock': {
+    controller: 'ShareController',
+    action: 'getLockStatus'
   },
   'GET /cars/:vin/drivers': {
     controller: 'ShareController',
@@ -70,59 +80,59 @@ module.exports.routes = {
     controller: 'ShareController',
     action: 'revokePermission'
   },
-  'GET /cars/:vin/protection': {
-    controller: 'ShareController',
-    action: 'isProtect'
-  },
-  'POST /cars/:vin/protection/action': {
-    controller: 'ShareController',
-    action: 'postProtectCommand'
-  },
+  // 'GET /cars/:vin/protection': {
+  //   controller: 'ShareController',
+  //   action: 'isProtect'
+  // },
+  // 'POST /cars/:vin/protection/action': {
+  //   controller: 'ShareController',
+  //   action: 'postProtectCommand'
+  // },
 
 
-  // Care
-  'GET /cars/:vin/mil': {
-    controller: 'CareController',
-    action: 'getMilStatus'
-  },
-  'GET /cars/:vin/charging': {
-    controller: 'CareController',
-    action: 'getChargingStatus'
-  },
-  'GET /cars/:vin/battery': {
-    controller: 'CareController',
-    action: 'getBatteryStatus'
-  },
-  'GET /cars/:vin/tyrePressure': {
-    controller: 'CareController',
-    action: 'getTyrePressureStatus'
-  },
-  'GET /cars/:vin/lamp': {
-    controller: 'CareController',
-    action: 'getLampStatus'
-  },
-  'GET /cars/:vin/engineOil': {
-    controller: 'CareController',
-    action: 'getEngineOilStatus'
-  },
-  'GET /cars/:vin/fuel': {
-    controller: 'CareController',
-    action: 'getFuelStatus'
-  },
-  'POST /cars/:vin/charging/setting/action': {
-    controller: 'ShareController',
-    action: 'postChargingSetting'
-  },
-  'POST /cars/:vin/charging/schedule/action': {
-    controller: 'ShareController',
-    action: 'postChargingSchedule'
-  },
+  // // Care
+  // 'GET /cars/:vin/mil': {
+  //   controller: 'CareController',
+  //   action: 'getMilStatus'
+  // },
+  // 'GET /cars/:vin/charging': {
+  //   controller: 'CareController',
+  //   action: 'getChargingStatus'
+  // },
+  // 'GET /cars/:vin/battery': {
+  //   controller: 'CareController',
+  //   action: 'getBatteryStatus'
+  // },
+  // 'GET /cars/:vin/tyrePressure': {
+  //   controller: 'CareController',
+  //   action: 'getTyrePressureStatus'
+  // },
+  // 'GET /cars/:vin/lamp': {
+  //   controller: 'CareController',
+  //   action: 'getLampStatus'
+  // },
+  // 'GET /cars/:vin/engineOil': {
+  //   controller: 'CareController',
+  //   action: 'getEngineOilStatus'
+  // },
+  // 'GET /cars/:vin/fuel': {
+  //   controller: 'CareController',
+  //   action: 'getFuelStatus'
+  // },
+  // 'POST /cars/:vin/charging/setting/action': {
+  //   controller: 'ShareController',
+  //   action: 'postChargingSetting'
+  // },
+  // 'POST /cars/:vin/charging/schedule/action': {
+  //   controller: 'ShareController',
+  //   action: 'postChargingSchedule'
+  // },
 
 
-  // Notification
-  'POST /notification/action': {
-    controller: 'NotificationController',
-    action: 'postNotification'
-  }
+  // // Notification
+  // 'POST /notification/action': {
+  //   controller: 'NotificationController',
+  //   action: 'postNotification'
+  // }
 
 };
