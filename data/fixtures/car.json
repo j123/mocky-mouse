@@ -1,0 +1,12 @@
+[
+  {
+    "vin": "12345678901234567",
+    "lockStatus": 0,
+    "protectionStatus": 0
+  },
+  {
+    "vin": "00000000000000000",
+    "lockStatus": 0,
+    "protectionStatus": 0
+  }
+]

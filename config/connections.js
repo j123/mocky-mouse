@@ -46,15 +46,15 @@ module.exports.connections = {
      */
     adapter: 'waterline-sqlite3', // or 'memory' 
 
-    // /**
-    //  * Location of file if type='disk'
-    //  */
-    // filename: './.tmp/db.sqlite',
+    /**
+     * Location of file if type='disk'
+     */
+    filename: './.tmp/db.sqlite',
  
-    // /**
-    //  * Set to true to output SQL queries
-    //  */
-    // debug: false
+    /**
+     * Set to true to output SQL queries
+     */
+    debug: false
   }
 
   /***************************************************************************

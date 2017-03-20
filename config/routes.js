@@ -45,17 +45,22 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  // Share
-  'POST /cars/:vin/drivers': {
-    controller: 'ShareController',
-    action: 'createDriver'
+  
+  // data setup
+  'POST /db/init': {
+    controller: 'DatabaseController',
+    action: 'init'
   },
-  'POST /cars': {
-    controller: 'ShareController',
+  'POST /db/cars': {
+    controller: 'DatabaseController',
     action: 'createCar'
   },
+  'POST /db/cars/:vin/drivers': {
+    controller: 'DatabaseController',
+    action: 'createDriver'
+  },
 
-
+  // Share
   'POST /cars/:vin/lock/action': {
     controller: 'ShareController',
     action: 'postlockCommand'

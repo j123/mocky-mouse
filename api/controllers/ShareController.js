@@ -5,8 +5,9 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 var _ = require('lodash');
-var moment = require("moment");
 var uuid = require('node-uuid');
+
+var db = require('../../data/database');
 
 var ShareController = {
 
@@ -112,35 +113,6 @@ var ShareController = {
   	};
     Driver.update(criteria, values).exec(function(err, updated){
       res.send(204);
-    });
-  },
-
-  createCar: function (req, res) {
-    var reqBody = req.body;
-  	var values = {
-  		vin: reqBody.vin,
-  		lockStatus: reqBody.lockStatus,
-  		protectionStatus: reqBody.protectionStatus,
-  		timeStamp: moment().unix() * 1000
-  	};
-    Car.create(values).exec(function(err, created){
-      res.created(created);
-    });
-  },
-
-  createDriver: function (req, res) {
-    var vin = req.params.vin;
-    var reqBody = req.body;
-  	var values = {
-  		vin: vin,
-  		userId: reqBody.userId,
-  		userName: reqBody.userName,
-  		userRole: reqBody.userRole,
-  		carPermission: reqBody.carPermission,
-  		avatarUrl: reqBody.avatarUrl
-  	};
-    Driver.create(values).exec(function(err, created){
-      res.created(created);
     });
   },
 
